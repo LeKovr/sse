@@ -15,12 +15,14 @@ import (
 func TestEncodeOnlyData(t *testing.T) {
 	w := new(bytes.Buffer)
 	event := Event{
+Event: "message",
 		Data: "junk\n\njk\nid:fake",
 	}
 	err := Encode(w, event)
 	assert.NoError(t, err)
 	assert.Equal(t, w.String(),
-		`data:junk
+		`event:message
+data:junk
 data:
 data:jk
 data:id:fake
@@ -34,7 +36,7 @@ data:id:fake
 func TestEncodeWithEvent(t *testing.T) {
 	w := new(bytes.Buffer)
 	event := Event{
-		Event: "t\n:<>\r\test",
+		Event: "t\\n:<>\\r\test",
 		Data:  "junk\n\njk\nid:fake",
 	}
 	err := Encode(w, event)
