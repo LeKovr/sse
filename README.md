@@ -1,9 +1,9 @@
 # Server-Sent Events
 
-[![GoDoc](https://godoc.org/github.com/gin-contrib/sse?status.svg)](https://godoc.org/github.com/gin-contrib/sse)
-[![Build Status](https://travis-ci.org/gin-contrib/sse.svg)](https://travis-ci.org/gin-contrib/sse)
-[![codecov](https://codecov.io/gh/gin-contrib/sse/branch/master/graph/badge.svg)](https://codecov.io/gh/gin-contrib/sse)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gin-contrib/sse)](https://goreportcard.com/report/github.com/gin-contrib/sse)
+[![GoDoc](https://godoc.org/github.com/LeKovr/sse?status.svg)](https://godoc.org/github.com/LeKovr/sse)
+[![Build Status](https://travis-ci.org/LeKovr/sse.svg)](https://travis-ci.org/LeKovr/sse)
+[![codecov](https://codecov.io/gh/LeKovr/sse/branch/master/graph/badge.svg)](https://codecov.io/gh/LeKovr/sse)
+[![Go Report Card](https://goreportcard.com/badge/github.com/LeKovr/sse)](https://goreportcard.com/report/github.com/LeKovr/sse)
 
 Server-sent events (SSE) is a technology where a browser receives automatic updates from a server via HTTP connection. The Server-Sent Events EventSource API is [standardized as part of HTML5[1] by the W3C](http://www.w3.org/TR/2009/WD-eventsource-20091029/).
 
@@ -13,7 +13,7 @@ Server-sent events (SSE) is a technology where a browser receives automatic upda
 ## Sample code
 
 ```go
-import "github.com/gin-contrib/sse"
+import "github.com/LeKovr/sse"
 
 func httpHandler(w http.ResponseWriter, req *http.Request) {
 	// data can be a primitive like a string, an integer or a float
